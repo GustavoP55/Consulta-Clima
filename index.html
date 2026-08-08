@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>ClimaZika</title>
+</head>
+<body>
+
+    <nav class="navbar">
+      <h1 class="titulo">ClimaZika</h1>
+
+      <div class="nav-links">
+        <a href="#clima">Clima</a>
+        <a href="#sobre">Sobre Nós</a>
+      </div>
+
+      <button class="btn-entrar">Entrar</button>
+    </nav>
+
+    
+    <div id="climaBox">
+        <form id="search">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <input type="search" name="cityName" id="cityName" placeholder="Procurar Cidade">
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <div id="weather">
+            <h1 id="titulo">São Paulo, BR</h1>
+
+            <div id="infos">
+                <div id="temp">
+                    <img id="tempImage" src="http://openweathermap.org/img/wn/04d@2x.png" alt="">
+
+                    <div>
+                        <p id="tempValue">
+                            32
+                        </p>
+                        <p id="tempDescription">
+                            Ensolarado
+                        </p>
+                    </div>
+                </div>
+
+                <div id="otherInfos">
+                    <div class="info">
+                        <i id="tempMaxIcon" class="fa-solid fa-temperature-high"></i>
+
+                        <div>
+                            <h2>Temp Max</h2>
+
+                            <p id="tempMax">
+                                32 <sup>C°</sup>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <i id="tempMinIcon" class="fa-solid fa-temperature-low"></i>
+
+                        <div>
+                            <h2>Temp Min</h2>
+
+                            <p id="tempMin">
+                                6 <sup>C°</sup>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <i id="humidityIcon" class="fa-solid fa-droplet"></i>
+
+                        <div>
+                            <h2>Humidade</h2>
+
+                            <p id="humidity">
+                                67%
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <i id="windIcon" class="fa-solid fa-wind"></i>
+
+                        <div>
+                            <h2>Vento</h2>
+
+                            <p id="wind">
+                                30 km
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="alert">
+
+        </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
+</body>
+</html>
