@@ -78,8 +78,10 @@ body{
 #climaBox{
     background-color: #f0f8ff;
     border-radius: 20px;
-    margin: 20px 200px 50px 200px;
+    margin: 20px auto 50px auto;
     padding: 20px;
+    max-width: 500px;
+    width: 90%;
     height: 100%;
 }
 
@@ -203,4 +205,17 @@ body{
 #alert img{
     width: 200px;
     margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
 }
