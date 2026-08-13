@@ -112,12 +112,18 @@ body{
 }
 
 #weather{
-    display: none;
     margin-top: 20px;
+    opacity: 0;
+    transform: translateY(15px);
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
 }
 
 #weather.show{
-    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 600px;
 }
 
 #weather #titulo{
@@ -218,4 +224,25 @@ body{
     .nav-links {
         gap: 15px;
     }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+#search.shake {
+    animation: shake 0.4s ease;
+}
+
+#search button.loading i {
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
